@@ -1,0 +1,328 @@
+/* font-family: 'Open Sans', sans-serif; */
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+header{
+    background-color: #2e64a2;
+    padding: 16px 0;
+}
+
+header h1{
+    color: white;
+    font-size: 2.5em;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+}
+
+nav{
+    background-color: #84b1e5;
+    margin-bottom: 25px;
+}
+
+nav ul li{
+    
+   width: 16%;
+   display: inline-block;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    /* float: left; */
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+}
+
+nav ul li a:hover{
+    background-color: #2f64a1;
+
+}
+
+nav ul li a.activo{
+    background-color: #28588f;
+}
+
+
+.footer{
+    background-color: black;
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    clear: both; /* elemento va de punta a punta */
+}    
+
+
+
+.holder{
+    max-width: 960px;
+    margin: 0 auto;
+    
+}
+
+h2{
+    color: #2f64a1;
+    font-weight: 400;
+}
+
+.bienvenidos{
+    width: 75%;
+    /* background-color: yellow; */
+    float: left;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.bienvenidos p{
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.testimonios{
+    width: 25%;
+    /* background-color: tomato; */
+    float: right;
+}
+
+.testimonio{
+    background-color: rgb(177, 177, 177);
+    padding: 12px;
+
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    display: block;
+}
+
+.testimonio .autor{
+    font-size: 12px;
+    text-align: center;
+    display: block;
+}
+
+/* fin home */
+
+
+/* -----------------nosotros-------------------------- */
+
+.historia p{
+    font-size: 13px;
+}
+
+.personas{
+    display: flex;
+    /* background-color: red; */
+    justify-content: space-between ;
+    margin-bottom: 20px;
+
+}
+
+
+.persona{
+width: 18%;
+border: 2px solid rgb(189, 187, 187);
+border-radius: 7px;
+text-align: center;
+padding: 8px;
+box-sizing: border-box;
+}
+
+.persona img{
+    max-width: 75%;
+    border-radius: 50%;
+    box-shadow: 10px 0 0 0  rgba(128, 128, 128, 0.215);
+
+}
+
+.persona h5,
+.persona h6{
+    margin: 0;
+    color: rgb(0, 60, 128);
+    font-weight: normal;
+}
+
+.persona h6{
+    font-style: italic;
+    font-weight: 700;
+}
+
+.persona p{
+    font-size: 12px;
+}
+
+
+/* fin nosotros ------------------------*/
+
+
+
+
+/* servicios ----------------------------- */
+
+
+.servicio{
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.servicio img{
+    border-radius: 8px;
+}
+
+.servicio .info{
+    max-width: 75%;
+}
+
+.servicio .info h4{
+    color: indigo;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 500;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 15px;
+    margin: 10px;
+}
+
+.servicio .info p{
+    font-size: 13px;
+    /* line-height: 20px; */
+}
+
+/* >>>>>lo nuevo <<<<<<*/
+
+.servicio:nth-child(odd) img { /* odd = impar */ 
+    /* array se cuentan 0 1 2 3 4 por eso no toma en este caso left en el primero */
+    float: left;
+    margin: 0 16px 0 0;
+}
+
+.servicio:nth-child(odd) .info { /* odd = impar */
+    float: right;
+    
+}
+
+.servicio:nth-child(even) img { /* even = par */
+    float: right;
+    margin: 0 0 0 16px;
+}
+
+.servicio:nth-child(even) .info { /* even = par */
+    float: left;
+    
+}
+
+/* fin servicios----------------------------------- */
+
+
+
+/* inicio galeria----------- */
+
+.galeria .foto{
+    border: 1px solid grey;
+    /* display: inline-block; */
+    border-radius: 10px;
+    float: left;
+    padding: 5px;
+    width: 18%;
+    box-sizing: border-box;
+    margin-left: 2.5%;
+    margin-bottom: 10px;
+}
+
+.galeria .foto img{
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+}
+
+.galeria .foto:nth-child(5n+1){
+    margin-left: 0;
+    border-color: red;
+}
+
+.galeria .foto:nth-child(3){
+    background-color: aqua;
+}
+
+/* fin galeria ----------*/
+
+
+/* contacto -------------*/
+
+.contacto,
+.redes{
+    width: 48%;
+    /* background-color: rgb(121, 121, 194); */
+    box-sizing: border-box;
+    
+}
+
+.contacto{
+    float: left;
+    border-right: 2px solid rgb(66, 66, 129);
+    padding-left: 15px;
+}
+
+.redes{
+    float: right;
+    padding: 0 0 15 15;
+    
+}
+
+.formulario input,
+.formulario textarea{
+    /* background-color: cadetblue; */
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 5px;
+    /* width: 70%; opcion 1 */
+    width: 90%; /* opcion 2 */
+
+}
+.formulario label{
+    /* background-color: grey; */
+    width: 22%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formulario textarea{
+    resize: none;
+    height: 200px;
+}
+
+.formulario input[type="submit"] {
+
+    /* color: red; */
+    width: auto;
+    /* background-color: rgb(67, 99, 107) */;
+    color: rgb(5, 5, 5);
+    box-shadow: 0 0 15px gray;
+    
+
+}
+
+.centrar{
+   /*  background-color: green; */
+    text-align: center;
+}
+
+.mapa{
+    max-width: 70%;
+    /* display: none; */
+}
+
+
+
+/* [] {} */
