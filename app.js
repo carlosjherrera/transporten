@@ -13,6 +13,7 @@ var serviciosRouter = require('./routes/servicios');//servicios.js
 var galeriaRouter = require('./routes/galeria');//galeria.js
 var novedadesROuter = require('./routes/novedades');//novedades.js
 var contactoRouter = require('./routes/contacto');//contacto.js
+var loginRouter = require('./routes/admin/login');// admin/ login.js
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use('/servicios', serviciosRouter); //12
 app.use('/galeria',galeriaRouter);//13
 app.use('/novedades',novedadesROuter);//14
 app.use('/contacto',contactoRouter);//15
+app.use('/admin/login',loginRouter);//16
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
