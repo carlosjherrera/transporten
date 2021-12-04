@@ -1,10 +1,72 @@
- <h2>Prox las novedades</h2>
- <div class="container">
-<div class="row">
-    <div class="col">
-        <p class="text-end">Hola {{usuario}}! <a class="btn btn-danger">Cerrar Sesión  <i class="fas fa-sign-out-alt"></i> </a></p>
+
+<div class="container">
+    {{!-- inicio fila 1 --}}
+    <div class="row">
+        <div class="col">
+            <p class="text-end">Hola {{usuario}}! <a class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Cerrar
+                    Sesión </a></p>
+        </div>
+
+    </div>
+    {{!-- fin fila 1 --}}
+
+    {{!-- inicio fila 2 --}}
+
+    <div class="row">
+        <div class="col-7">
+            <h3>Listado de novedades</h3>
+        </div>
+
+        <div class="col-5 text-end">
+            <a href="" class="btn btn-success"> <i class="fas fa-plus"></i></a>
+
+        </div>
+        {{!-- fin fila 2 --}}
+
+
+
+        {{!-- inicio fila 3 --}}
+
+        <div class="row" style="margin-top:20px">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">#</th>
+                            <th scope="col">Título</th>
+                            <th scope="col" class="text-end">Acciones</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each novedades}}
+                        <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{titulo}}</td>
+                            <td class="text-end">
+                                <a href="" class="btn btn-secondary"> <i class="fas fa-pencil-alt"></i> </a>
+                                <a href="" class="btn btn-secondary"> <i class="fas fa-trash-alt"></i> </a>
+                            </td>
+                        </tr>
+                        {{/each}}
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+        </div>
+        {{!-- fin fila 3 --}}
+
+
+
+
+
+
     </div>
 
-</div>
 
- </div>
+
+
+</div>
