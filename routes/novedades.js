@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var novedadesModels = require('../models/novedadesModels');
 
-router.get('/',function(req,res,next){
-    res.render('admin/novedades',{
-        layout:'admin/layout',
-        usuario:req.session.nombre
+router.get('/',async function(req,res,next){
+
+    var novedades = await novedadesModels.getNovedades();
+
+    res.render('novedades',{
+        isNovedades:true,
+        novedades
         
     });// novedades.hbs
 })
