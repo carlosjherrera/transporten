@@ -2,18 +2,29 @@
     <div class="row">
         <div class="col">
             <h2>Modificar novedades</h2>
-            <form action="/admin/novedades/modificar" method="post">
-            <input type="hidden" name="id" value={{novedad.id}}>
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value={{novedad.id}}>
                 <div class="mb-3">
-                 <input type="text" class="form-control" id="titulo"  placeholder="Titulo" name="titulo" value="{{novedad.titulo}}"/>  
+                    <input type="text" class="form-control" id="titulo" placeholder="Titulo" name="titulo"
+                        value="{{novedad.titulo}}" />
                 </div>
 
                 <div class="mb-3">
-                 <textarea type="text" class="form-control" id="titulo"  placeholder="Subtitulo" name="subtitulo">{{novedad.subtitulo}}</textarea>  
+                    <textarea type="text" class="form-control" id="titulo" placeholder="Subtitulo"
+                        name="subtitulo">{{novedad.subtitulo}}</textarea>
                 </div>
 
-                 <div class="mb-3">
-                 <textarea type="text" class="form-control" id="titulo"  placeholder="Contenido" name="cuerpo">{{novedad.cuerpo}}</textarea>  
+                <div class="mb-3">
+                    <p>Imgen <input type="file" name="imagen"></p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" value="1">Eliminar la imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{novedad.img_id}}" />
+                    </p>
+                </div>
+
+                <div class="mb-3">
+                    <textarea type="text" class="form-control" id="titulo" placeholder="Contenido"
+                        name="cuerpo">{{novedad.cuerpo}}</textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Modificar</button>
@@ -21,7 +32,7 @@
             {{#if message}}
             <p>{{message}}</p>
             {{/if}}
-         
+
         </div>
 
     </div>
